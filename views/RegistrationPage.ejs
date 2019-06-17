@@ -2,13 +2,23 @@
 <html>
 <head>
 	<title>Assesment</title>
-	<link rel="stylesheet" type="text/css" href="../CSS/RegistrationFormStyle.css">
-        <script type="text/javascript" src="../JavaScript/RegistrationFormValidation.js"></script>
+	<link rel="stylesheet" type="text/css" href="/CSS/RegistrationFormStyle.css">
+        <script type="text/javascript" src="/JavaScript/RegistrationFormValidation.js"></script>
 </head>
 <body>
+        <div class="SwitchContainer">
+           <table cellspacing="10">
+                   <tr>
+                           <td><a href="./WelcomePage"><button>Home</button></a></td>
+                   
+                           <td><a href="./LoginPage"><button>Login</button></a></td>
+                   </tr>
+           </table>                        
+        </div>
 	<div class="MasterContainer">
+
         <div class="Container">
-        	<form action="..node/records.js" method="post" name="RegForm" onsubmit="return RegValidation()">
+        	<form action="/register" method="post" name="RegForm" onsubmit="return RegValidation()">
         		<div>
         			<input type="text" name="FName" placeholder="Enter U R First Name" autocomplete="off">
         		</div>
@@ -34,7 +44,7 @@
         				<option value="+96">+96</option>
         				<option value="+97">+97</option>
         			</select>
-        			<input type="tel" name="PNumber" placeholder="Enter U R Phone Number" autocomplete="off">
+        			<input type="text" name="PNumber" placeholder="Enter U R Phone Number" autocomplete="off">
         		</div>
         		<br>
 

@@ -9,9 +9,9 @@ body
 .MasterContainer
 {
 	position: relative;
-	height: 600px;
+	height: 550px;
 	width: 100%;
-	margin-top:80px;
+	margin-top:10px;
 	margin-bottom: 20px;
 	background-image: url('../images/nature.jpg');
 	background-size: cover;
@@ -29,6 +29,14 @@ body
     text-align: center;
     padding: 30px 30px;
 
+}
+
+.SwitchContainer
+{
+	height: 40px;
+	width:15%;
+	margin-top: 30px;
+	margin-left: 30px;
 }
 
 input[type="text"],[type="mail"],[type="password"]
@@ -81,4 +89,15 @@ input[type="radio"]
 {
 	text-align: left;
         padding-left: 50px;
+}
+
+button
+{
+	width: 100%;
+	padding: 5px 15px;
+	background-color: #1578A2;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
 }

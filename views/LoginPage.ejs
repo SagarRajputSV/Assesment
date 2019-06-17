@@ -2,15 +2,25 @@
 <html>
 <head>
 	<title>Login to SV Carrers</title>
-	<link rel="stylesheet" type="text/css" href="../CSS/LoginPage.css">
-        <script type="text/javascript" src="../JavaScript/LoginValidation.js"></script>
+	<link rel="stylesheet" type="text/css" href="/CSS/LoginPage.css">
+        <script type="text/javascript" src="/JavaScript/LoginValidation.js"></script>
 </head>
 <body>
+    <div class="SwitchContainer">
+        <table cellspacing="10">
+                <tr>
+                        <td><a href="./WelcomePage"><button>Home</button></a></td>
+                   
+                        <td><a href="./RegistrationPage"><button>Register</button></a></td>
+                </tr>
+           </table>                        
+    </div> 
+
 	<div class="MasterContainer">
 		<div class="Container">
                         
                         <h3>Login to SV Carrers</h3>
-                        <form action="/login" name="LoginForm" onsubmit="return LoginValidation()">
+                        <form action="/login" method="POST" name="LoginForm" onsubmit="return LoginValidation()">
                                 <div style="margin-top: 50px;">
                                     <input type="mail" name="Email" placeholder="Enter U R Mail Id" autocomplete="off">
                                 </div>
