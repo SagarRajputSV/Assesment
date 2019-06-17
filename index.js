@@ -18,10 +18,10 @@ app.use(express.static(path.join(__dirname,"public")));
 
 const connectionstring = 
 {
-    user: 'sa',
+    user: 'training',
     password: 'training',
-    server: 'SAGARRAJPUT-PC\\SQLEXPRESS', 
-    database: 'Training'
+    server: '10.0.103.99\\SQL2008R2', 
+    database: 'SQL_Training1'
 }
         
 sql.connect(connectionstring,(err)=>{
@@ -66,7 +66,7 @@ app.post('/register',(req,res)=>{
                     console.log(err.message);
                 }
 
-                res.send(JSON.stringify(result.recordset));
+                res.send(JSON.stringify(result));
             });            
 });   
 
@@ -85,9 +85,9 @@ app.post('/login',(req,res)=>{
                 console.log(err.message);
             }
 
-            // res.render('LoginPortalPage');
+            res.render('LoginPortalPage');
 
-            res.send(result.recordset[0]);
+            // res.send(result.recordset[0]);
         });
 });
 

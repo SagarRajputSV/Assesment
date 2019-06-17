@@ -6,7 +6,7 @@
 </head>
 <body>
 	 <div class="SwitchContainer">
-	   <a href=""><button class="Logout">Logout</button></a>                           
+	   <a href="./LoginPage"><button class="Logout">Logout</button></a>                           
     </div>
 
 	<div class="MasterContainer">		
@@ -18,7 +18,7 @@
 							Walkin with You're Updated Resume to Cognizant SoftVision Mysuru SSTP<br>
 							24-06-2019 10:00AM-11:30AM</p></div>
 						</td>
-						<td><div class="ButtonContainer"><a href=""><button>Apply</button></a></div></td>                                        
+						<td><div class="ButtonContainer"><button id="btn1" onclick="click1()">Apply</button></div></td>                                        
 					</tr>
 				</table>
 
@@ -31,7 +31,7 @@
 							Walkin with You're Updated Resume to Cognizant SoftVision Mysuru SSTP<br>
 							24-06-2019 10:00AM-11:30AM</p></div>
 						</td>
-						<td><div class="ButtonContainer"><a href=""><button>Apply</button></a></div></td>                                        
+						<td><div class="ButtonContainer"><button id="btn2" onclick="click2()">Apply</button></div></td>                                        
 					</tr>
 				</table>
 
@@ -39,5 +39,23 @@
 
 		</div>
 	</div>
+
+	<script>
+		
+		function click1()
+		{
+			var buttonele1 = document.getElementById("btn1");
+			var buttonele2 = document.getElementById("btn2");
+
+			buttonele1.addEventListener("click1",()=>{
+				buttonele1.textContent="applied";
+			});
+
+			buttonele2.addEventListener("click2",()=>{
+				buttonele2.textContent="applied";
+			});
+			
+		}
+	</script>
 </body>
 </html>
