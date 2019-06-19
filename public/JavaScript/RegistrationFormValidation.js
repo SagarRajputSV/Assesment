@@ -11,7 +11,7 @@ function RegValidation()
 
     //Regular Expression for validation 
     var FNameEleCheck=/^[A-Za-z. ]{3,30}$/;
-    var LNameEleCheck=/^[A-Za-z. ]{3,30}$/;
+    var LNameEleCheck=/^[A-Za-z. ]{1,30}$/;
     var EmailEleCheck=/^[A-Za-z0-9._]{3,30}@[A-Za-z]{3,10}[.]{1}[A-Za-z]{2,6}$/;
     var PNumberEleCheck=/^[0-9]{6,13}/;
     var PasswordEleCheck=/^(?=.*[0-9])(?=.*[!@#$%^&*()_+-=<>])(?=.*[A-Z])[A-Za-z0-9!@#$%^&*()-_+=<>?/]{8,16}$/;

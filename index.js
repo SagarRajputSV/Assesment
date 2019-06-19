@@ -44,29 +44,48 @@ app.get('/RegistrationPage',(req,res)=>{
 });
 
 app.get('/LoginPage',(req,res)=>{
-     res.render('LoginPage');
+     res.render('LoginPage',{message:""});
 });
 
 app.post('/register',(req,res)=>{
+
         var Fname = req.body.FName;
         var Lname = req.body.LName;
         var Email = req.body.Email;
-        var pnumber= req.body.pnumber;
+        var pnumber= req.body.PNumber;
         var password = req.body.password;
+        var gender = req.body.Gender;
 
         var request = new sql.Request();
         
         var que = "EXEC ValidateAndAddRegisters @FirstName='"+Fname+"',@LastName=\
         '"+Lname+"',@EmailId='"+Email+"',@PhoneNumber='"+pnumber+"',@Password=\
-        '"+password+"'";
+        '"+password+"',@Gender='"+gender+"'";
          
         request.query(que,(err,result)=>{
                 if(err)
                 {
                     console.log(err.message);
                 }
+                
+               var message='';
+               const DBmessage = JSON.stringify(result.recordset[0]).substring(5,49);
+                
+               if (DBmessage =='"Succesfully Registered"}')
+               {
+                   console.log("Hello");
+                   message=DBmessage.substring(0,22);
+                   res.render('LoginPage',{message:message});
+               }
+               
+               else
+               {
+                message = DBmessage;
+                res.render('LoginPage',{message:message}); 
+               }
+                             
 
-                res.send(JSON.stringify(result));
+                
             });            
 });   
 
