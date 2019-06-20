@@ -75,7 +75,7 @@ app.post('/register',(req,res)=>{
                {
                   
                    message=DBmessage.substring(0,22);
-                   message = message + 'Please Login for the intial use';
+                   message = message + ' Please Login for the intial use';
                    res.render('LoginPage',{message:message});
                }
                
