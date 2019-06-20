@@ -83,8 +83,7 @@ app.post('/register',(req,res)=>{
                {
                 message = DBmessage;
                 res.render('LoginPage',{message:message}); 
-               }
-                             
+               }                     
 
                 
             });            
