@@ -71,10 +71,11 @@ app.post('/register',(req,res)=>{
                var message='';
                const DBmessage = JSON.stringify(result.recordset[0]).substring(5,49);
                 
-               if (DBmessage =='"Succesfully Registered"}')
+               if (DBmessage =='Succesfully Registered"}')
                {
-                   console.log("Hello");
+                  
                    message=DBmessage.substring(0,22);
+                   message = message + 'Please Login for the intial use';
                    res.render('LoginPage',{message:message});
                }
                
